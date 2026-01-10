@@ -3,13 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GSM Engineering Works</title>
+  <title>GSM Engineering Works | Commercial Vehicle Repair & Truck Fabrication</title>
   <meta name="description" content="GSM Engineering Works — professional truck repair, custom fabrication, and engine overhauls for commercial vehicles. Contact us for quotes and fleet services." />
   <meta name="theme-color" content="#1f4a6f">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lib/styles.css">
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.ico" type="image/svg+xml">
   <!-- Replace the favicon file at img/favicon.svg with your logo-based favicon -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "GSM Engineering Works",
+  "image": "https://gsmengineeringworks.in/img/logo.png",
+  "email": "info@gsmengineeringworks.in",
+  "telephone": "+91 97306 38682",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Sa 09:00-19:00",
+  "priceRange": "₹₹",
+  "sameAs": [
+    "https://wa.me/919730638682"
+  ]
+}
+</script>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -17,6 +38,32 @@
       <div id="navbar-container"></div>
 
   <main id="main" role="main">
+
+        <section class="hero">
+      <div class="container">
+        <h1>Commercial Vehicle Repair & Truck Fabrication Experts</h1>
+        <p class="muted">
+          We specialize in repairing, fabrication, and engine works for cars, trucks, and heavy commercial vehicles.
+        </p>
+        <a href="contact.html" class="btn primary">Get a Quote</a>
+        <a href="tel:+919730638682" class="btn outline">Call Now</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>About GSM Engineering Works</h2>
+        <div class="hero-image " style="height: 100px; width: 100px;" aria-hidden="true">
+        <img src="/gsmengineeringworks/img/about image.jpeg" alt="GSM Engineering Works"/>
+      </div>
+    </div>
+        <p class="muted">
+          GSM Engineering Works is a trusted automobile engineering workshop delivering reliable
+          commercial vehicle repair, engine works, and complete truck body fabrication services.
+        </p>
+      </div>
+    </section>
+
     <section id="services" class="section services container">
       <h2>Our Services</h2>
       <p class="lead">Comprehensive repair, fabrication and engine services for trucks and commercial vehicles.</p>
@@ -64,16 +111,19 @@
           <label>Message <textarea name="message" rows="5" placeholder="Tell us about the job"></textarea></label>
           <button type="submit" class="btn">Send Message</button>
           <p class="muted form-status" aria-live="polite"></p>
-          <p class="muted">This site is a prototype. See README for steps to configure a working form.</p>
+          <!-- <p class="muted">This site is a prototype. See README for steps to configure a working form.</p> -->
         </form>
         <aside class="contact-info">
           <h3>Visit or call</h3>
-          <p class="muted">Address: <em>Replace with your address</em></p>
-          <p class="muted">Phone: <strong>+91 XXXXXXXXXX</strong></p>
+          <p class="muted">Manager: <strong>Kailas Kadam</strong></p>
+          <p class="muted">Address: <em>1-2/24 Near Khandak Nala Rd kopargaon, Maharashtra – 423601</em></p>
+          <p class="muted">Phone: <strong>+91 97306 38682</strong></p>
+          <p class="muted">Mail: <strong>info@gsmengineeringworks.in</strong></p>
           <div class="map">
             <!-- Replace the iframe below by pasting the Google Maps embed iframe code for your business location -->
             <!-- Example embed iframe src will look like: https://www.google.com/maps/embed?pb=... -->
-            <iframe id="map-embed" src="https://maps.google.com/maps?q=truck%20repair&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
+            <!-- <iframe id="map-embed" src="https://maps.google.com/maps?q=truck%20repair&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11490.187033593498!2d74.46079309819284!3d19.886536649367756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc4466e0fca5df%3A0xb520884e38fd146b!2sKhandak%20Nala%20Rd%2C%20Subhadranagar%2C%20Kopargaon%2C%20Maharashtra%20423601!5e1!3m2!1sen!2sin!4v1768046061610!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
           </div>
         </aside>
       </div>
@@ -88,7 +138,17 @@
     <button class="lightbox-close" aria-label="Close">×</button>
     <img class="lightbox-img" src="" alt="">
   </div>
+<script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const msg = document.getElementById("message").value;
 
+  const url = `https://wa.me/919730638682?text=Name:%20${name}%0APhone:%20${phone}%0AMessage:%20${msg}`;
+  window.open(url, "_blank");
+}
+</script>
   <script src="lib/script.js"></script>
   <script src="lib/load.js"></script>
 </body>
