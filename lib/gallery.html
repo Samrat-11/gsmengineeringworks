@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery — TruckPro Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--==================== Navbar ====================-->
+      <div id="navbar-container"></div>
+
+  <main role="main">
+    <section class="section gallery container">
+      <h2>Completed Work</h2>
+      <p class="lead">Click an image to view larger.</p>
+      <div class="gallery-grid">
+        <img src="../img/placeholder-1.svg" srcset="../img/placeholder-1.svg 1x, ../img/placeholder-1@2x.svg 2x" alt="Project 1" class="gallery-item"/>
+        <img src="../img/placeholder-2.svg" srcset="../img/placeholder-2.svg 1x, ../img/placeholder-2@2x.svg 2x" alt="Project 2" class="gallery-item"/>
+        <img src="../img/placeholder-3.svg" srcset="../img/placeholder-3.svg 1x, ../img/placeholder-3@2x.svg 2x" alt="Project 3" class="gallery-item"/>
+        <img src="../img/placeholder-4.svg" srcset="../img/placeholder-4.svg 1x, ../img/placeholder-4@2x.svg 2x" alt="Project 4" class="gallery-item"/>
+        <img src="../img/placeholder-5.svg" srcset="../img/placeholder-5.svg 1x, ../img/placeholder-5@2x.svg 2x" alt="Project 5" class="gallery-item"/>
+        <img src="../img/placeholder-6.svg" srcset="../img/placeholder-6.svg 1x, ../img/placeholder-6@2x.svg 2x" alt="Project 6" class="gallery-item"/>
+      </div>
+    </section>
+  </main>
+
+   <!--==================== FOOTER ====================-->
+  <div id="footer-container"></div>
+
+  <!-- Lightbox modal (re-uses same element from index if needed) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+  <script src="load.js"></script> 
+</body>
+</html>

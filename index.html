@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GSM Engineering Works</title>
+  <meta name="description" content="GSM Engineering Works — professional truck repair, custom fabrication, and engine overhauls for commercial vehicles. Contact us for quotes and fleet services." />
+  <meta name="theme-color" content="#1f4a6f">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lib/styles.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Replace the favicon file at img/favicon.svg with your logo-based favicon -->
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!--==================== Navbar ====================-->
+      <div id="navbar-container"></div>
+
+  <main id="main" role="main">
+    <section id="services" class="section services container">
+      <h2>Our Services</h2>
+      <p class="lead">Comprehensive repair, fabrication and engine services for trucks and commercial vehicles.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558981283-86aa6a41f51f?w=800&q=60&auto=format&fit=crop" alt="Repair" />
+          <h3>Repair & Maintenance</h3>
+          <p>Brakes, suspension, electrics, welding and full chassis repair to keep your fleet moving.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800&q=60&auto=format&fit=crop" alt="Fabrication" />
+          <h3>Custom Fabrication</h3>
+          <p>We fabricate new bodies, racking, and custom mounts to your exact spec — welded and painted.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=60&auto=format&fit=crop" alt="Engine" />
+          <h3>Engine Works</h3>
+          <p>Diagnostics, rebuilds, and performance tuning for diesel and petrol engines.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery container">
+      <h2>Gallery</h2>
+      <p class="lead">Recent projects & fabrications.</p>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1541446654331-0444d9b3701e?w=800&q=60&auto=format&fit=crop" alt="Project 1" class="gallery-item"/>
+        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=60&auto=format&fit=crop" alt="Project 2" class="gallery-item"/>
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&q=60&auto=format&fit=crop" alt="Project 3" class="gallery-item"/>
+        <img src="https://images.unsplash.com/photo-1514474959185-6d7f67d9a3ff?w=800&q=60&auto=format&fit=crop" alt="Project 4" class="gallery-item"/>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact container">
+      <h2>Contact Us</h2>
+      <p class="lead">Reach out for a fast estimate or to schedule work.</p>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" aria-label="Contact form" method="POST" action="https://formspree.io/f/your-form-id" data-form-provider="formspree">
+          <!-- To use Formspree: replace the action URL with your form endpoint (https://formspree.io/f/xxxx) and keep data-form-provider="formspree" -->
+          <!-- To use Netlify Forms (recommended for Netlify hosts): remove the 'action' attribute, add data-netlify="true" and include <input type="hidden" name="form-name" value="contact"> and set data-form-provider="netlify" -->
+          <!-- Example Netlify form start: <form id="contact-form" class="contact-form" method="POST" data-netlify="true" data-form-provider="netlify"> <input type="hidden" name="form-name" value="contact"> -->
+          <label>Full name <input type="text" name="name" placeholder="Your name" required></label>
+          <label>Email <input type="email" name="email" placeholder="you@example.com" required></label>
+          <label>Phone <input type="tel" name="phone" placeholder="+91 ..." required></label>
+          <label>Message <textarea name="message" rows="5" placeholder="Tell us about the job"></textarea></label>
+          <button type="submit" class="btn">Send Message</button>
+          <p class="muted form-status" aria-live="polite"></p>
+          <p class="muted">This site is a prototype. See README for steps to configure a working form.</p>
+        </form>
+        <aside class="contact-info">
+          <h3>Visit or call</h3>
+          <p class="muted">Address: <em>Replace with your address</em></p>
+          <p class="muted">Phone: <strong>+91 XXXXXXXXXX</strong></p>
+          <div class="map">
+            <!-- Replace the iframe below by pasting the Google Maps embed iframe code for your business location -->
+            <!-- Example embed iframe src will look like: https://www.google.com/maps/embed?pb=... -->
+            <iframe id="map-embed" src="https://maps.google.com/maps?q=truck%20repair&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <div id="footer-container"></div>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" tabindex="-1">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="lib/script.js"></script>
+  <script src="lib/load.js"></script>
+</body>
+</html>
