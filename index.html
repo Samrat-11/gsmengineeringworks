@@ -39,7 +39,7 @@
 
   <main id="main" role="main">
 
-        <section class="hero">
+        <!-- <section class="hero">
       <div class="container">
         <h1>Commercial Vehicle Repair & Truck Fabrication Experts</h1>
         <p class="muted">
@@ -48,21 +48,32 @@
         <a href="contact.html" class="btn primary">Get a Quote</a>
         <a href="tel:+919730638682" class="btn outline">Call Now</a>
       </div>
-    </section>
+    </section> -->
 
     <section class="section">
-      <div class="container narrow">
-        <h2>About GSM Engineering Works</h2>
-        <div class="hero-image " style="height: 100px; width: 100px;" aria-hidden="true">
-        <img src="../img/about image.jpeg" alt="GSM Engineering Works"/>
+  <div class="container narrow">
+
+    <h2>About GSM Engineering Works</h2>
+
+    <div class="about-wrapper">
+      <!-- LEFT : IMAGE -->
+      <div class="about-image">
+        <img src="../img/about image.jpeg" alt="GSM Engineering Works">
       </div>
-    </div>
+
+      <!-- RIGHT : CONTENT -->
+      <div class="about-content">
         <p class="muted">
-          GSM Engineering Works is a trusted automobile engineering workshop delivering reliable
-          commercial vehicle repair, engine works, and complete truck body fabrication services.
+          We specialize in repairing, fabricating, and rebuilding commercial vehicles including cars,
+          trucks, and heavy-duty transport vehicles. From engine repairs to full truck body fabrication,
+          GSM Engineering Works delivers durable, cost-effective, and high-quality engineering solutions.
         </p>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <section id="services" class="section services container">
       <h2>Our Services</h2>
@@ -101,17 +112,13 @@
       <h2>Contact Us</h2>
       <p class="lead">Reach out for a fast estimate or to schedule work.</p>
       <div class="contact-grid">
-        <form id="contact-form" class="contact-form" aria-label="Contact form" method="POST" action="https://formspree.io/f/your-form-id" data-form-provider="formspree">
-          <!-- To use Formspree: replace the action URL with your form endpoint (https://formspree.io/f/xxxx) and keep data-form-provider="formspree" -->
-          <!-- To use Netlify Forms (recommended for Netlify hosts): remove the 'action' attribute, add data-netlify="true" and include <input type="hidden" name="form-name" value="contact"> and set data-form-provider="netlify" -->
-          <!-- Example Netlify form start: <form id="contact-form" class="contact-form" method="POST" data-netlify="true" data-form-provider="netlify"> <input type="hidden" name="form-name" value="contact"> -->
+        <form id="contact-form" class="contact-form" aria-label="Contact form" onsubmit="sendToWhatsApp(event)">
+          
           <label>Full name <input type="text" name="name" placeholder="Your name" required></label>
           <label>Email <input type="email" name="email" placeholder="you@example.com" required></label>
           <label>Phone <input type="tel" name="phone" placeholder="+91 ..." required></label>
           <label>Message <textarea name="message" rows="5" placeholder="Tell us about the job"></textarea></label>
           <button type="submit" class="btn">Send Message</button>
-          <p class="muted form-status" aria-live="polite"></p>
-          <!-- <p class="muted">This site is a prototype. See README for steps to configure a working form.</p> -->
         </form>
         <aside class="contact-info">
           <h3>Visit or call</h3>
@@ -139,16 +146,31 @@
     <img class="lightbox-img" src="" alt="">
   </div>
 <script>
-function sendWhatsApp(e){
+function sendToWhatsApp(e) {
   e.preventDefault();
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const msg = document.getElementById("message").value;
 
-  const url = `https://wa.me/919730638682?text=Name:%20${name}%0APhone:%20${phone}%0AMessage:%20${msg}`;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappNumber = "919730638682"; // GSM Engineering Works
+
+  const text =
+    `New Contact Form Submission:%0A` +
+    `Name: ${name}%0A` +
+    `Email: ${email}%0A` +
+    `Phone: ${phone}%0A` +
+    `Message: ${message}`;
+
+  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
   window.open(url, "_blank");
+
+  document.querySelector(".form-status").textContent =
+    "Redirecting to WhatsApp…";
 }
 </script>
+
   <script src="lib/script.js"></script>
   <script src="lib/load.js"></script>
 </body>
