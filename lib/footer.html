@@ -39,11 +39,10 @@
 }
 
 /* ========== SCROLL UP ========== */
-
 .scrollup {
   position: fixed;
-  right: 1rem;
-  bottom: -50%;
+  right: clamp(12px, 3vw, 20px);
+  bottom: calc( env(safe-area-inset-bottom, 0px) + 16px );
   width: 44px;
   height: 44px;
   background: var(--brand);
@@ -53,15 +52,17 @@
   justify-content: center;
   border-radius: 50%;
   font-size: 1.2rem;
-  transition: .3s;
-  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  z-index: 9999;
 }
 
-.show-scroll { bottom: 1.25rem; }
+/* Visible state */
+.show-scroll { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
-/* ===============================
-   MOBILE (FINAL OVERRIDE)
-================================ */
+/* ==========  MOBILE (FINAL OVERRIDE) ========== */
 
 @media (max-width: 768px) {
   .footer-grid { display: flex; flex-direction: column; gap: 28px; text-align: start; }
