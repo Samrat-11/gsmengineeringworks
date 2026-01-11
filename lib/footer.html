@@ -1,37 +1,36 @@
 <style>
 /* ===============================
-   FOOTER ENHANCED
-================================ */
-/* ===============================
-   FOOTER – CLEAN & MINIMAL
+   FOOTER – RESPONSIVE & CLEAN
 ================================ */
 
 .site-footer {
-  background: #f8fafc; /* subtle contrast */
+  background: #f8fafc;
   border-top: 1px solid #e5e7eb;
   margin-top: 60px;
-  padding-top: 50px;
+  padding-top: 48px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 40px;
 }
 
-.footer-brand h3 {
+/* Columns */
+.footer-col h3 {
+  font-size: 1.1rem;
   margin-bottom: 12px;
-  color: #0f172a;
 }
 
 .footer-col h4 {
-  margin-bottom: 14px;
   font-size: 0.95rem;
+  margin-bottom: 14px;
   color: #0f172a;
 }
 
 .footer-col p {
   line-height: 1.6;
+  max-width: 320px;
 }
 
 .footer-links {
@@ -54,21 +53,22 @@
   color: var(--brand);
 }
 
+/* WhatsApp */
 .footer-whatsapp {
   display: inline-block;
   margin-top: 14px;
   background: #25D366;
   color: #fff;
-  padding: 9px 18px;
+  padding: 10px 20px;
   border-radius: 999px;
   font-size: 0.9rem;
-  font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Bottom bar */
 .footer-bottom {
-  margin-top: 45px;
-  padding: 18px 0;
+  margin-top: 40px;
+  padding: 16px 0;
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
   text-align: center;
@@ -76,34 +76,11 @@
   color: var(--muted);
 }
 
-/* Scroll Up Button */
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -50%;
-  width: 45px;
-  height: 45px;
-  background: var(--brand);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem;
-  border-radius: 50%;
-  transition: .4s;
-  z-index: 999;
-}
+/* ===============================
+   MOBILE FIXES (IMPORTANT)
+================================ */
 
-.scrollup:hover {
-  transform: translateY(-.4rem);
-}
-
-.show-scroll {
-  bottom: 1.5rem;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -115,10 +92,39 @@
     text-align: center;
   }
 
+  .footer-col p {
+    max-width: none;
+  }
+
   .footer-whatsapp {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* ===============================
+   SCROLL UP
+================================ */
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  width: 44px;
+  height: 44px;
+  background: var(--brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: .3s;
+  z-index: 999;
+}
+
+.show-scroll {
+  bottom: 1.25rem;
 }
 
 
@@ -127,9 +133,9 @@
 <footer class="site-footer" role="contentinfo">
   <div class="container footer-grid">
 
-    <!-- COMPANY INFO -->
-    <div class="footer-col">
-      <h4>GSM Engineering Works</h4>
+    <!-- BRAND -->
+    <div class="footer-col footer-brand">
+      <h3>GSM Engineering Works</h3>
       <p class="muted">
         Reliable automobile engineering workshop specializing in commercial
         vehicle repair, engine works, and complete truck body fabrication.
@@ -160,48 +166,53 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="footer-col">
+    <div class="footer-col footer-contact">
       <h4>Contact Info</h4>
       <p class="muted">
-        📍 Kopargaon, Maharashtra<br>
-        📞 +91 97306 38682<br>
-        ✉️ info@gsmengineeringworks.in
+        <span>📍 Kopargaon, Maharashtra</span><br>
+        <span>📞 +91 97306 38682</span><br>
+        <span>✉️ info@gsmengineeringworks.in</span>
       </p>
 
-      <a href="https://wa.me/919730638682" class="footer-whatsapp">
+      <a href="https://wa.me/919730638682"
+         class="footer-whatsapp"
+         target="_blank">
         Chat on WhatsApp
       </a>
     </div>
 
   </div>
 
-  <!-- COPYRIGHT -->
   <div class="footer-bottom">
     <p>© <span id="year"></span> GSM Engineering Works. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Scroll to top -->
+<a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+  ↑
+</a>
+
 
 <!-- SCROLL UP -->
 <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
   <i class="fas fa-arrow-up"></i>
 </a>
 
-
-
-
   <!--========== SCROLL UP ==========-->
 <!-- <a href="#" class="scrollup" id="scroll-up"><i class="fas fa-arrow-up"></i></a> -->
 
 <script>
-  // Scroll up button
+// Scroll to top
 window.addEventListener('scroll', () => {
-  const scrollUp = document.getElementById('scroll-up');
-  if (!scrollUp) return;
-  scrollUp.classList.toggle('show-scroll', window.scrollY >= 350);
+  const btn = document.getElementById('scroll-up');
+  if (!btn) return;
+  btn.classList.toggle('show-scroll', window.scrollY > 300);
 });
 
-// Footer year
+// Auto year
 document.getElementById('year').textContent = new Date().getFullYear();
+
 
 /*=============== SHOW SCROLL UP ===============*/
   onscroll = () => document.getElementById('scroll-up').classList.toggle('show-scroll', scrollY >= 350);
