@@ -2,13 +2,24 @@
 /* Navbar Styles */
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: 1px; color: #fff; }
 .brand img { width: 70px; height: 70px;}
-.logo { width: 75px; height: 75px; border-radius: 50%; }
+.brand img.logo {
+  height: 45px;        /* ✅ Fixed height */
+  width: auto;         /* ✅ Maintain aspect ratio */
+  max-width: 160px;
+  object-fit: contain;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .brand img.logo {
+    height: 38px;
+  }
+}
 </style>
 
 <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
       <a href="index.html" class="brand">
-        <img src="../img/logo.png" class="logo" alt="GSM Engineering Works Logo" /> GSM Engineering Works
+        <img src="../img/logo.png" class="logo" alt="GSM Engineering Works Logo" /> <span>GSM Engineering Works</span>
       </a>
       <button class="nav-toggle" aria-label="Open navigation">☰</button>
       <ul class="nav-list">
