@@ -126,6 +126,46 @@
 .show-scroll {
   bottom: 1.25rem;
 }
+/* =========================================
+   FINAL MOBILE FOOTER OVERRIDE (FORCE STACK)
+   MUST BE AT END OF CSS FILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+  .footer-grid {
+    display: flex !important;      /* override grid */
+    flex-direction: column !important;
+    gap: 28px !important;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-col h3,
+  .footer-col h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-col p {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-whatsapp {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 
 </style>
