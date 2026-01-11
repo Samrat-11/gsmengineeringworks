@@ -1,5 +1,24 @@
+<style>
+/* Scroll Up */
+.scrollup {
+  position:fixed; right:1rem; bottom:-50%; width:45px; height:45px;
+  background:blue; color:#fff; display:flex; justify-content:center; align-items:center;
+  font-size:1.25rem; border-radius:50%; transition:.4s;
+}
+.scrollup:hover { transform:translateY(-.5rem); }
+.show-scroll { bottom:1rem; }
+</style>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>© <span id="year"></span> TruckPro Services — All rights reserved.</p>
     </div>
   </footer>
+
+  <!--========== SCROLL UP ==========-->
+<a href="#" class="scrollup" id="scroll-up"><i class="fas fa-arrow-up"></i></a>
+
+<script>
+/*=============== SHOW SCROLL UP ===============*/
+  onscroll = () => document.getElementById('scroll-up').classList.toggle('show-scroll', scrollY >= 350);
+</script>

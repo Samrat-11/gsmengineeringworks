@@ -24,7 +24,6 @@ button, .btn, a.cta{transition:box-shadow .12s ease}
 button:focus-visible, .btn:focus-visible, a.cta:focus-visible{box-shadow:0 0 0 4px rgba(243,156,18,0.18)}
 .site-header{background:linear-gradient(90deg, rgba(31,74,111,0.95), rgba(31,74,111,0.95)), url('https://images.unsplash.com/photo-1511919884226-7b2d1b0b85a2?w=1600&q=60&auto=format&fit=crop') center/cover no-repeat;color:#fff}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{font-weight:700;letter-spacing:1px;color:#fff}
 .nav-list{list-style:none;display:flex;gap:16px;align-items:center;margin:0;padding:0}
 .nav-list a{color:#fff;padding:8px 12px;border-radius:8px}
 .nav-list .cta{background:var(--accent);color:#fff}
