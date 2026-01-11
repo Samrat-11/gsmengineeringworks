@@ -68,6 +68,11 @@
           trucks, and heavy-duty transport vehicles. From engine repairs to full truck body fabrication,
           GSM Engineering Works delivers durable, cost-effective, and high-quality engineering solutions.
         </p>
+              <p class="muted">
+        With years of hands-on experience in heavy vehicle engineering,
+        we deliver long-lasting and safety-focused solutions.
+      </p>
+
       </div>
     </div>
 
@@ -112,14 +117,34 @@
       <h2>Contact Us</h2>
       <p class="lead">Reach out for a fast estimate or to schedule work.</p>
       <div class="contact-grid">
-        <form id="contact-form" class="contact-form" aria-label="Contact form" onsubmit="sendToWhatsApp(event)">
-          
-          <label>Full name <input type="text" name="name" placeholder="Your name" required></label>
-          <label>Email <input type="email" name="email" placeholder="you@example.com" required></label>
-          <label>Phone <input type="tel" name="phone" placeholder="+91 ..." required></label>
-          <label>Message <textarea name="message" rows="5" placeholder="Tell us about the job"></textarea></label>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+        <form id="contact-form"
+      class="contact-form"
+      aria-label="Contact form"
+      onsubmit="sendToWhatsApp(event)">
+
+  <label>
+    Full name
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+  </label>
+
+  <label>
+    Email
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  </label>
+
+  <label>
+    Phone
+    <input type="tel" id="phone" name="phone" placeholder="+91 ..." required>
+  </label>
+
+  <label>
+    Message
+    <textarea id="message" name="message" rows="5" placeholder="Tell us about the job"></textarea>
+  </label>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
         <aside class="contact-info">
           <h3>Visit or call</h3>
           <p class="muted">Manager: <strong>Kailas Kadam</strong></p>
@@ -149,10 +174,10 @@
 function sendToWhatsApp(e) {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
 
   const whatsappNumber = "919730638682"; // GSM Engineering Works
 
@@ -164,12 +189,11 @@ function sendToWhatsApp(e) {
     `Message: ${message}`;
 
   const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-  window.open(url, "_blank");
 
-  document.querySelector(".form-status").textContent =
-    "Redirecting to WhatsApp…";
+  window.open(url, "_blank");
 }
 </script>
+
 
   <script src="lib/script.js"></script>
   <script src="lib/load.js"></script>
