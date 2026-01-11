@@ -2,23 +2,36 @@
 /* ===============================
    FOOTER ENHANCED
 ================================ */
+/* ===============================
+   FOOTER – CLEAN & MINIMAL
+================================ */
+
 .site-footer {
-  background: #ffffff;
-  margin-top: 60px;
-  padding-top: 40px;
+  background: #f8fafc; /* subtle contrast */
   border-top: 1px solid #e5e7eb;
+  margin-top: 60px;
+  padding-top: 50px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  margin-bottom: 12px;
+  color: #0f172a;
 }
 
 .footer-col h4 {
-  margin-bottom: 12px;
-  font-size: 1rem;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
   color: #0f172a;
+}
+
+.footer-col p {
+  line-height: 1.6;
 }
 
 .footer-links {
@@ -29,11 +42,12 @@
 
 .footer-links li {
   margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 .footer-links a {
   color: var(--muted);
-  font-size: 0.95rem;
 }
 
 .footer-links a:hover {
@@ -42,25 +56,27 @@
 
 .footer-whatsapp {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 14px;
   background: #25D366;
   color: #fff;
-  padding: 8px 14px;
-  border-radius: 20px;
+  padding: 9px 18px;
+  border-radius: 999px;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
-/* Footer bottom */
+/* Bottom bar */
 .footer-bottom {
-  margin-top: 30px;
-  padding: 15px 0;
-  background: #f9fafb;
+  margin-top: 45px;
+  padding: 18px 0;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
   text-align: center;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
-/* Scroll Up */
+/* Scroll Up Button */
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -86,7 +102,7 @@
   bottom: 1.5rem;
 }
 
-/* Responsive Footer */
+/* Responsive */
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -98,7 +114,13 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
+
+  .footer-whatsapp {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
 
 </style>
 
@@ -164,23 +186,23 @@
   <i class="fas fa-arrow-up"></i>
 </a>
 
-<script>
-  // Scroll up button
-  window.addEventListener('scroll', () => {
-    document
-      .getElementById('scroll-up')
-      .classList.toggle('show-scroll', window.scrollY >= 350);
-  });
 
-  // Auto year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 
   <!--========== SCROLL UP ==========-->
 <!-- <a href="#" class="scrollup" id="scroll-up"><i class="fas fa-arrow-up"></i></a> -->
 
 <script>
+  // Scroll up button
+window.addEventListener('scroll', () => {
+  const scrollUp = document.getElementById('scroll-up');
+  if (!scrollUp) return;
+  scrollUp.classList.toggle('show-scroll', window.scrollY >= 350);
+});
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
 /*=============== SHOW SCROLL UP ===============*/
   onscroll = () => document.getElementById('scroll-up').classList.toggle('show-scroll', scrollY >= 350);
 </script>
